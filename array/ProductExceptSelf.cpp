@@ -16,7 +16,17 @@
  * 8  = 1*2*4
  * 6  = 1*2*3
  *
- * Prefix Product: []
+ * Prefix Product: [1, 1, 2, 6]
+ * index 0 -> nothing left -> 1
+ * index 1 -> 1
+ * index 2 -> 1*2
+ * index 3 -> 1*2*3
+ *
+ * Suffix Product: [24, 12, 4, 1]
+ * index 0 -> 2*3*4
+ * index 1 -> 3*4
+ * index 2 -> 4
+ * index 3 -> nothing right -> 1
  */
 
 

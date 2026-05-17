@@ -16,4 +16,6 @@ add_executable(dsa_pratise main.cpp
         array/ContainsDuplicate.cpp
         string/ValidAnagram.cpp
         string/GroupAnagram.cpp
-        array/ProductExceptSelf.cpp)
+        array/ProductExceptSelf.cpp
+        array/LongestConsecutiveSequence.cpp
+        binary-search/RotatedSortedArray.cpp)
