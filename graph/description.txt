@@ -1,0 +1,58 @@
+Graphs
+
+This is where interviews become significantly harder.
+And where gameplay engineering becomes far more interesting:
+
+* pathfinding
+* navigation
+* quests
+* dialogue trees
+* AI
+* dependency systems
+* procedural generation
+* multiplayer routing
+
+MOST IMPORTANT BFS PROPERTY
+In: unweighted graphs
+BFS gives: the shortest path (fewest edges)
+This is extremely important.
+
+DFS Graph Template
+
+void dfs(int node, std::unordered_set<int>& visited, std::unordered_map<int, std::vector<int>>& graph)
+{
+    visited.insert(node);
+    for(int neighbor : graph[node])
+    {
+        if(!visited.count(neighbor))
+        {
+            dfs(neighbor, visited, graph);
+        }
+    }
+}
+
+BFS Graph Template
+
+void bfs(int start, std::unordered_map<int, std::vector<int>>& graph)
+{
+    std::queue<int> q;
+    std::unordered_set<int> visited;
+
+    q.push(start);
+    visited.insert(start);
+
+    while(!q.empty())
+    {
+        int current = q.front();
+        q.pop();
+
+        for(int neighbor : graph[current])
+        {
+            if(!visited.count(neighbor))
+            {
+                visited.insert(neighbor);
+                q.push(neighbor);
+            }
+        }
+    }
+}

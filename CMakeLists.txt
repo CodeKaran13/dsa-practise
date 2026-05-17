@@ -6,7 +6,14 @@ set(CMAKE_CXX_STANDARD 20)
 add_executable(dsa_pratise main.cpp
         array/TwoSum.cpp
         array/ShortestSubArray.cpp
-        array/LongestSubstring.cpp
+        string/LongestSubstring.cpp
         stack/ValidParentheses.cpp
         stack/DailyTemperature.cpp
-        tree/TreeTraversal.cpp)
+        tree/TreeTraversal.cpp
+        tree/ValidBST.cpp
+        tree/BFS.cpp
+        graph/NumberOfIslands.cpp
+        array/ContainsDuplicate.cpp
+        string/ValidAnagram.cpp
+        string/GroupAnagram.cpp
+        array/ProductExceptSelf.cpp)
