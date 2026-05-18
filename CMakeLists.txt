@@ -18,4 +18,5 @@ add_executable(dsa_pratise main.cpp
         string/GroupAnagram.cpp
         array/ProductExceptSelf.cpp
         array/LongestConsecutiveSequence.cpp
-        binary-search/RotatedSortedArray.cpp)
+        binary-search/RotatedSortedArray.cpp
+        binary-search/FindMinimum.cpp)
