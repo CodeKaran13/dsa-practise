@@ -19,4 +19,7 @@ add_executable(dsa_pratise main.cpp
         array/ProductExceptSelf.cpp
         array/LongestConsecutiveSequence.cpp
         binary-search/RotatedSortedArray.cpp
-        binary-search/FindMinimum.cpp)
+        binary-search/FindMinimum.cpp
+        binary-search/KokoEatingBananas.cpp
+        backtracking/Subset.cpp
+        backtracking/Permutations.cpp)
