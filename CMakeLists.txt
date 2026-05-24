@@ -22,4 +22,6 @@ add_executable(dsa_pratise main.cpp
         binary-search/FindMinimum.cpp
         binary-search/KokoEatingBananas.cpp
         backtracking/Subset.cpp
-        backtracking/Permutations.cpp)
+        backtracking/Permutations.cpp
+        raii/File.cpp
+        raii/Buffer.cpp)
