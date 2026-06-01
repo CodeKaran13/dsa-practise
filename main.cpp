@@ -10,7 +10,7 @@ bool isValid(const std::string& s);
 
 bool isValidOptimized(const std::string& s);
 
-void Move(Vector2 a, Vector2 b, float duration, float deltaTime)
+void Move(Vector2 start, Vector2 end, float duration, float deltaTime)
 {
     float elapsedTime = 0.0f;
 
@@ -18,7 +18,7 @@ void Move(Vector2 a, Vector2 b, float duration, float deltaTime)
     {
         elapsedTime += deltaTime;
         float alpha = elapsedTime / duration;
-        Vector2 position = Lerp(a, b, alpha);
+        Vector2 position = Lerp(start, end, alpha);
 
         std::cout << "Position: " << position.x << ", " << position.y << "\n";
     }
