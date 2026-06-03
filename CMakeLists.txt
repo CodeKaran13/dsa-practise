@@ -65,4 +65,5 @@ add_executable(dsa_pratise main.cpp
         binary-search/ShipWithinDays.cpp
         heap/KthLargest.cpp
         heap/TopKFrequentElements.cpp
+        tree/NumberOfIslands.cpp
 )
