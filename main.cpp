@@ -1,4 +1,6 @@
 #include <iostream>
+#include <vector>
+
 #include "weapon-system/Player.h"
 #include "weapon-system/Weapon.h"
 #include "weapon-system/WeaponFactory.h"

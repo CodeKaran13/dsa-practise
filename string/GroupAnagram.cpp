@@ -20,19 +20,20 @@
 #include <unordered_map>
 #include <algorithm>
 
-std::vector<std::vector<std::string>> groupAnagrams(const std::vector<std::string>& strs)
+using namespace std;
+vector<vector<string>> groupAnagrams(const vector<string>& strs)
 {
-    std::unordered_map<std::string, std::vector<std::string>> group;
+    unordered_map<string, vector<string>> group;
 
-    for (const std::string& word : strs)
+    for (const string& word : strs)
     {
-        std::string key = word;
-        std::sort(key.begin(), key.end());
+        string key = word;
+        sort(key.begin(), key.end());
 
         group[key].push_back(word);
     }
 
-    std::vector<std::vector<std::string>> result;
+    vector<vector<string>> result;
     for (auto& pair : group)
     {
         result.reserve(group.size());

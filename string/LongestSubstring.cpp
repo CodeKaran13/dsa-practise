@@ -37,7 +37,6 @@ int lengthOfLongestSubstring(const std::string &s)
 	return maxLength;
 }
 
-
 int lengthOfLongestSubstringOptimized(const std::string &s)
 {
 	std::unordered_map<char, int> lastSeen;

@@ -14,6 +14,7 @@
  */
 
 
+#include <climits>
 #include <vector>
 
 int shortestSubArray(const std::vector<int> &nums, int target)

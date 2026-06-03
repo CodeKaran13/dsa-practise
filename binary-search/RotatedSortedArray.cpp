@@ -45,7 +45,7 @@ int searchInRotatedSortedArray(const std::vector<int>& nums, int target)
         else
         {
             // Check if target lies between mid and right
-            if (nums[mid] <= target && target < nums[right])
+            if (nums[mid] < target && target <= nums[right])
             {
                 left = mid + 1;
             }

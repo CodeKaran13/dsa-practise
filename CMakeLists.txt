@@ -62,4 +62,5 @@ add_executable(dsa_pratise main.cpp
         tower-defense-game/WaveManager.h
         tower-defense-game/GameManager.cpp
         tower-defense-game/GameManager.h
+        binary-search/ShipWithinDays.cpp
 )
