@@ -16,6 +16,7 @@
 
 #include <stack>
 #include <string>
+#include <unordered_map>
 
 bool isValid(const std::string &s)
 {
@@ -46,18 +47,15 @@ bool isValid(const std::string &s)
 			{
 				return false;
 			}
-
 			st.pop();
 		}
 	}
-
 	return st.empty();
 }
 
 bool isValidOptimized(const std::string &s)
 {
 	std::stack<char> st;
-
 	for (char c: s)
 	{
 		if (c == '(' || c == '[' || c == '{')
@@ -72,15 +70,12 @@ bool isValidOptimized(const std::string &s)
 			}
 
 			char top = st.top();
-
 			if (c == ')' && top != '(' || c == ']' && top != '[' || c == '}' && top != '{')
 			{
 				return false;
 			}
-
 			st.pop();
 		}
 	}
-
 	return st.empty();
 }
