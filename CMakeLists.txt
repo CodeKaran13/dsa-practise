@@ -65,4 +65,5 @@ add_executable(dsa_pratise main.cpp
         heap/KthLargest.cpp
         heap/TopKFrequentElements.cpp
         graph/NumberOfIslands.cpp
+        linked-list/ReverseLinkedList.cpp
 )
