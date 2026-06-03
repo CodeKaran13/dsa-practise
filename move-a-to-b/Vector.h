@@ -10,22 +10,18 @@ struct Vector2
     float x;
     float y;
 
-    Vector2 operator+(const Vector2& other) const
-    {
-        return {x + other.x, y + other.y};
-    }
+    Vector2();
+    Vector2(float x, float y);
 
-    Vector2 operator-(const Vector2& other) const
-    {
-        return {x - other.x, y - other.y};
-    }
+    Vector2 operator+(const Vector2& other) const;
+    Vector2 operator-(const Vector2& other) const;
+    Vector2 operator*(float value) const;
 
-    Vector2 operator*(float scalar) const
-    {
-        return {x * scalar, y * scalar};
-    }
+    float Length() const;
+    Vector2 Normalized();
+    static float Distance(const Vector2& a, const Vector2& b);
+    static Vector2 Lerp(const Vector2& a, const Vector2& b, float t);
 };
 
-Vector2 Lerp(const Vector2& a, const Vector2& b, float t);
 
 #endif //DSA_PRATISE_VECTOR_H

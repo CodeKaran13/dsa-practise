@@ -18,7 +18,7 @@ void Move(Vector2 start, Vector2 end, float duration, float deltaTime)
     {
         elapsedTime += deltaTime;
         float alpha = elapsedTime / duration;
-        Vector2 position = Lerp(start, end, alpha);
+        Vector2 position = Vector2::Lerp(start, end, alpha);
 
         std::cout << "Position: " << position.x << ", " << position.y << "\n";
     }
@@ -47,4 +47,6 @@ int main()
     float deltaTime = 0.2f;
 
     Move(start, end, duration, deltaTime);
+
+    return 0;
 }

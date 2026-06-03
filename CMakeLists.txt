@@ -50,4 +50,16 @@ add_executable(dsa_pratise main.cpp
         tic-tac-toe/Player.h
         tic-tac-toe/Game.cpp
         tic-tac-toe/Game.h
+        tower-defense-game/Enemy.cpp
+        tower-defense-game/Enemy.h
+        tower-defense-game/Path.cpp
+        tower-defense-game/Path.h
+        tower-defense-game/Projectile.cpp
+        tower-defense-game/Projectile.h
+        tower-defense-game/Tower.cpp
+        tower-defense-game/Tower.h
+        tower-defense-game/WaveManager.cpp
+        tower-defense-game/WaveManager.h
+        tower-defense-game/GameManager.cpp
+        tower-defense-game/GameManager.h
 )
