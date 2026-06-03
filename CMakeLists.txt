@@ -12,7 +12,6 @@ add_executable(dsa_pratise main.cpp
         tree/TreeTraversal.cpp
         tree/ValidBST.cpp
         tree/BFS.cpp
-        graph/NumberOfIslands.cpp
         array/ContainsDuplicate.cpp
         string/ValidAnagram.cpp
         string/GroupAnagram.cpp
@@ -65,5 +64,5 @@ add_executable(dsa_pratise main.cpp
         binary-search/ShipWithinDays.cpp
         heap/KthLargest.cpp
         heap/TopKFrequentElements.cpp
-        tree/NumberOfIslands.cpp
+        graph/NumberOfIslands.cpp
 )
