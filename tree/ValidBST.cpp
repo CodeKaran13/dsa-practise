@@ -11,10 +11,10 @@ struct TreeNode
     TreeNode* left;
     TreeNode* right;
 
-    TreeNode(const int value) : value(value), left(nullptr), right(nullptr) {}
+    TreeNode(int value) : value(value), left(nullptr), right(nullptr) {}
 };
 
-bool validate(const TreeNode* node, const long long minValue, const long long maxValue)
+bool validate(TreeNode* node, long long minValue, long long maxValue)
 {
     if (node == nullptr) return true;
     if (node->value <= minValue || node->value >= maxValue) return false;
@@ -24,5 +24,5 @@ bool validate(const TreeNode* node, const long long minValue, const long long ma
 
 bool isValidBST(TreeNode* root)
 {
-    return validate(root, std::numeric_limits<int>::min(), std::numeric_limits<int>::max());
+    return validate(root, std::numeric_limits<long long>::min(), std::numeric_limits<long long>::max());
 }
