@@ -14,13 +14,12 @@ struct TreeNode
     TreeNode(const int value) : value(value), left(nullptr), right(nullptr) {}
 };
 
-bool validate(const TreeNode* node, const long long minAllowed, const long long maxAllowed)
+bool validate(const TreeNode* node, const long long minValue, const long long maxValue)
 {
     if (node == nullptr) return true;
+    if (node->value <= minValue || node->value >= maxValue) return false;
 
-    if (node->value <= minAllowed || node->value >= maxAllowed) return false;
-
-    return validate(node->left, minAllowed, node->value) && validate(node->right, node->value, maxAllowed);
+    return validate(node->left, minValue, node->value) && validate(node->right, node->value, maxValue);
 }
 
 bool isValidBST(TreeNode* root)

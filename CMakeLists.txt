@@ -66,4 +66,6 @@ add_executable(dsa_pratise main.cpp
         heap/TopKFrequentElements.cpp
         graph/NumberOfIslands.cpp
         linked-list/ReverseLinkedList.cpp
+        linked-list/MergeTwoList.cpp
+        tree/MaxDepthBinaryTree.cpp
 )
