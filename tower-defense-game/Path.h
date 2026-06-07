@@ -4,8 +4,8 @@
 
 #ifndef DSA_PRATISE_PATH_H
 #define DSA_PRATISE_PATH_H
-#include <vector>
 
+#include <vector>
 #include "../move-a-to-b/Vector.h"
 
 namespace TowerDefense

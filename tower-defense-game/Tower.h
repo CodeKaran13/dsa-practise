@@ -4,11 +4,12 @@
 
 #ifndef DSA_PRATISE_TOWER_H
 #define DSA_PRATISE_TOWER_H
-#include <vector>
 
+#include <vector>
 #include "Enemy.h"
 #include "Projectile.h"
 #include "../move-a-to-b/Vector.h"
+#include <memory>
 
 namespace TowerDefense
 {

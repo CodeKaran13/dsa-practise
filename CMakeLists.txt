@@ -68,4 +68,16 @@ add_executable(dsa_pratise main.cpp
         linked-list/ReverseLinkedList.cpp
         linked-list/MergeTwoList.cpp
         tree/MaxDepthBinaryTree.cpp
+        snake-game/Position.cpp
+        snake-game/Position.h
+        snake-game/Direction.cpp
+        snake-game/Direction.h
+        snake-game/Board.cpp
+        snake-game/Board.h
+        snake-game/Snake.cpp
+        snake-game/Snake.h
+        snake-game/Food.cpp
+        snake-game/Food.h
+        snake-game/Game.cpp
+        snake-game/Game.h
 )

@@ -4,8 +4,10 @@
 
 #ifndef DSA_PRATISE_WAVEMANAGER_H
 #define DSA_PRATISE_WAVEMANAGER_H
+
 #include "Enemy.h"
 #include "Path.h"
+#include <memory>
 
 namespace TowerDefense
 {
