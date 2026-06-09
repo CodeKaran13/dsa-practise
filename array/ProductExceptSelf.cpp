@@ -7,7 +7,6 @@
  * Prefix / Suffix Product
  *
  * Given: nums = [1,2,3,4]
- *
  * Return: [24,12,8,6]
  *
  * Explanation:

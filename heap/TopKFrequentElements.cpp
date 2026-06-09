@@ -24,7 +24,8 @@ vector<int> topKFrequent(const vector<int>& nums, int k)
         int num = pair.first;
         int count = pair.second;
 
-        minHeap.push({count, num});
+        // emplace is optimized. push makes copy
+        minHeap.emplace(count, num);
 
         if (minHeap.size() > k)
         {

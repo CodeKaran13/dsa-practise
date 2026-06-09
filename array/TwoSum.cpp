@@ -31,6 +31,7 @@ std::vector<int> twoSum(const std::vector<int>& nums, int target)
     return {};
 }
 
+/// if nums array is sorted
 std::vector<int> twoSumOptimized(const std::vector<int>& nums, int target)
 {
     int left = 0;

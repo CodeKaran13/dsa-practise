@@ -25,18 +25,16 @@ bool isAnagram(const std::string& s, const std::string& t)
     }
 
     int frequency[26] = {0};
-
-    for (char c : s)
+    for (const char c : s)
     {
         frequency[c - 'a']++;
     }
-
-    for (char c : t)
+    for (const char c : t)
     {
         frequency[c - 'a']--;
     }
 
-    for (int count : frequency)
+    for (const int count : frequency)
     {
         if (count != 0)
         {

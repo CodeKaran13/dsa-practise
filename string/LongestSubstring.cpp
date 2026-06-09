@@ -16,43 +16,43 @@
 #include <unordered_map>
 #include <unordered_set>
 
-int lengthOfLongestSubstring(const std::string &s)
+int lengthOfLongestSubstring(const std::string& s)
 {
-	std::unordered_set<char> seen;
-	int left = 0;
-	int maxLength = 0;
+    std::unordered_set<char> seen;
+    int left = 0;
+    int maxLength = 0;
 
-	for (int right = 0; right < s.size(); right++)
-	{
-		char c = s[right];
-		while (seen.count(c))
-		{
-			seen.erase(s[left]);
-			left++;
-		}
-		seen.insert(c);
-		maxLength = std::max(maxLength, right - left + 1);
-	}
+    for (int right = 0; right < s.size(); right++)
+    {
+        char c = s[right];
+        while (seen.contains(c))
+        {
+            seen.erase(s[left]);
+            left++;
+        }
+        seen.insert(c);
+        maxLength = std::max(maxLength, right - left + 1);
+    }
 
-	return maxLength;
+    return maxLength;
 }
 
-int lengthOfLongestSubstringOptimized(const std::string &s)
+int lengthOfLongestSubstringOptimized(const std::string& s)
 {
-	std::unordered_map<char, int> lastSeen;
-	int left = 0;
-	int maxLength = 0;
+    std::unordered_map<char, int> lastSeen;
+    int left = 0;
+    int maxLength = 0;
 
-	for (int right = 0; right < s.size(); right++)
-	{
-		char c = s[right];
-		if (lastSeen.find(c) != lastSeen.end())
-		{
-			left = std::max(left, lastSeen[c] + 1);
-		}
-		lastSeen[c] = right;
-		maxLength = std::max(maxLength, right - left + 1);
-	}
+    for (int right = 0; right < s.size(); right++)
+    {
+        char c = s[right];
+        if (lastSeen.find(c) != lastSeen.end())
+        {
+            left = std::max(left, lastSeen[c] + 1);
+        }
+        lastSeen[c] = right;
+        maxLength = std::max(maxLength, right - left + 1);
+    }
 
-	return maxLength;
+    return maxLength;
 }

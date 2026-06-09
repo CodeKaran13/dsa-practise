@@ -18,7 +18,7 @@ bool containsDuplicate(const std::vector<int>& nums)
     std::unordered_set<int> seen;
     for (int num : nums)
     {
-        if (seen.count(num))
+        if (seen.contains(num))
         {
             return true;
         }
@@ -27,8 +27,7 @@ bool containsDuplicate(const std::vector<int>& nums)
     return false;
 }
 
-// If array is sorted
-
+/// If array is sorted
 bool containsDuplicateSorted(const std::vector<int>& nums)
 {
     for (int i = 1; i < nums.size(); i++)

@@ -18,21 +18,18 @@
 int longestConsecutive(const std::vector<int>& nums)
 {
     std::unordered_set<int> numSet(nums.begin(), nums.end());
-
     int longest = 0;
-
-    for (int num : nums)
+    for (const int num : nums)
     {
-        if (!numSet.count(num - 1))
+        if (!numSet.contains(num - 1))
         {
             int currentNum = num;
             int currentLength = 1;
-            while (numSet.count(currentNum + 1))
+            while (numSet.contains(currentNum + 1))
             {
                 currentNum++;
                 currentLength++;
             }
-
             longest = std::max(longest, currentLength);
         }
     }

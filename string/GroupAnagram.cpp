@@ -21,15 +21,14 @@
 #include <algorithm>
 
 using namespace std;
+
 vector<vector<string>> groupAnagrams(const vector<string>& strs)
 {
     unordered_map<string, vector<string>> group;
-
     for (const string& word : strs)
     {
         string key = word;
         sort(key.begin(), key.end());
-
         group[key].push_back(word);
     }
 

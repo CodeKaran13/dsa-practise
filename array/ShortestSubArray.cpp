@@ -17,22 +17,22 @@
 #include <climits>
 #include <vector>
 
-int shortestSubArray(const std::vector<int> &nums, int target)
+int shortestSubArray(const std::vector<int>& nums, int target)
 {
-	int left = 0;
-	int sum = 0;
-	int minLength = INT_MAX;
+    int left = 0;
+    int sum = 0;
+    int minLength = INT_MAX;
 
-	for (int right = 0; right < nums.size(); right++)
-	{
-		sum += nums[right];
-		while (sum >= target)
-		{
-			minLength = std::min(minLength, right - left + 1);
-			sum -= nums[left];
-			left++;
-		}
-	}
+    for (int right = 0; right < nums.size(); right++)
+    {
+        sum += nums[right];
+        while (sum >= target)
+        {
+            minLength = std::min(minLength, right - left + 1);
+            sum -= nums[left];
+            left++;
+        }
+    }
 
-	return minLength == INT_MAX ? 0 : minLength;
+    return minLength == INT_MAX ? 0 : minLength;
 }
