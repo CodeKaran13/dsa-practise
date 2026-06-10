@@ -8,15 +8,17 @@
 #include "TreeNode.h"
 
 
-bool validate(const TreeNode* node, long long minValue, long long maxValue)
+bool Validate(const TreeNode* node, long long minValue, long long maxValue)
 {
-    if (node == nullptr) return true;
-    if (node->val <= minValue || node->val >= maxValue) return false;
+    if (node == nullptr)
+        return true;
+    if (node->val <= minValue || node->val >= maxValue)
+        return false;
 
-    return validate(node->left, minValue, node->val) && validate(node->right, node->val, maxValue);
+    return Validate(node->left, minValue, node->val) && Validate(node->right, node->val, maxValue);
 }
 
-bool isValidBST(const TreeNode* root)
+bool IsValidBST(const TreeNode* root)
 {
-    return validate(root, std::numeric_limits<long long>::min(), std::numeric_limits<long long>::max());
+    return Validate(root, std::numeric_limits<long long>::min(), std::numeric_limits<long long>::max());
 }

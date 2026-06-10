@@ -7,7 +7,7 @@
 
 #include "TreeNode.h"
 
-std::vector<int> levelOrder(TreeNode* root)
+std::vector<int> LevelOrder(TreeNode* root)
 {
     std::vector<int> result;
     if (root == nullptr)
@@ -30,7 +30,7 @@ std::vector<int> levelOrder(TreeNode* root)
     return result;
 }
 
-std::vector<std::vector<int>> levelOrderBFS(TreeNode* root)
+std::vector<std::vector<int>> LevelOrderBFS(TreeNode* root)
 {
     std::vector<std::vector<int>> result;
     if (root == nullptr)

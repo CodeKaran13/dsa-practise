@@ -18,12 +18,13 @@
 
 
 #include <vector>
+
 using namespace std;
 
 void dfs(vector<vector<char>>& grid, int r, int c)
 {
-    int rows = grid.size();
-    int cols = grid[0].size();
+    const int rows = static_cast<int>(grid.size());
+    const int cols = static_cast<int>(grid[0].size());
 
     if (r < 0 || r >= rows || c < 0 || c >= cols)
         return;
@@ -44,8 +45,8 @@ int numIslands(vector<vector<char>>& grid)
     if (grid.empty())
         return 0;
 
-    int rows = grid.size();
-    int cols = grid[0].size();
+    const int rows = static_cast<int>(grid.size());
+    const int cols = static_cast<int>(grid[0].size());
 
     int islandCount = 0;
 

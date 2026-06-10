@@ -11,7 +11,7 @@ add_executable(dsa_pratise main.cpp
         stack/DailyTemperature.cpp
         tree/TreeTraversal.cpp
         tree/ValidBST.cpp
-        tree/BFS.cpp
+        Tree/LevelOrderTraversal.cpp
         Array-Hashing/ContainsDuplicate.cpp
         Array-Hashing/ValidAnagram.cpp
         Array-Hashing/GroupAnagram.cpp
@@ -87,4 +87,6 @@ add_executable(dsa_pratise main.cpp
         Tree/TreeNode.cpp
         Tree/TreeNode.h
         Tree/SymmetricTree.cpp
+        Tree/InvertBinaryTree.cpp
+        Graph/FloodFill.cpp
 )
