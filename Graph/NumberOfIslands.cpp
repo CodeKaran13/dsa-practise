@@ -21,7 +21,7 @@
 
 using namespace std;
 
-void dfs(vector<vector<char>>& grid, int r, int c)
+void DFS(vector<vector<char>>& grid, int r, int c)
 {
     const int rows = static_cast<int>(grid.size());
     const int cols = static_cast<int>(grid[0].size());
@@ -34,13 +34,13 @@ void dfs(vector<vector<char>>& grid, int r, int c)
 
     grid[r][c] = '0';
 
-    dfs(grid, r + 1, c);
-    dfs(grid, r - 1, c);
-    dfs(grid, r, c + 1);
-    dfs(grid, r, c - 1);
+    DFS(grid, r + 1, c);
+    DFS(grid, r - 1, c);
+    DFS(grid, r, c + 1);
+    DFS(grid, r, c - 1);
 }
 
-int numIslands(vector<vector<char>>& grid)
+int NumIslands(vector<vector<char>>& grid)
 {
     if (grid.empty())
         return 0;
@@ -57,7 +57,7 @@ int numIslands(vector<vector<char>>& grid)
             if (grid[r][c] == '1')
             {
                 islandCount++;
-                dfs(grid, r, c);
+                DFS(grid, r, c);
             }
         }
     }
