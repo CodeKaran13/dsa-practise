@@ -7,7 +7,6 @@
 #include <vector>
 
 using namespace std;
-
 vector<int> topKFrequent(const vector<int>& nums, int k)
 {
     unordered_map<int, int> freq;

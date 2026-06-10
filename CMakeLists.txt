@@ -4,19 +4,19 @@ project(dsa_pratise)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(dsa_pratise main.cpp
-        array/TwoSum.cpp
-        array/ShortestSubArray.cpp
-        string/LongestSubstring.cpp
+        Array-Hashing/TwoSum.cpp
+        Array-Hashing/ShortestSubArray.cpp
+        Array-Hashing/LongestSubstring.cpp
         stack/ValidParentheses.cpp
         stack/DailyTemperature.cpp
         tree/TreeTraversal.cpp
         tree/ValidBST.cpp
         tree/BFS.cpp
-        array/ContainsDuplicate.cpp
-        string/ValidAnagram.cpp
-        string/GroupAnagram.cpp
-        array/ProductExceptSelf.cpp
-        array/LongestConsecutiveSequence.cpp
+        Array-Hashing/ContainsDuplicate.cpp
+        Array-Hashing/ValidAnagram.cpp
+        Array-Hashing/GroupAnagram.cpp
+        Array-Hashing/ProductExceptSelf.cpp
+        Array-Hashing/LongestConsecutiveSequence.cpp
         binary-search/RotatedSortedArray.cpp
         binary-search/FindMinimum.cpp
         binary-search/KokoEatingBananas.cpp
@@ -80,4 +80,11 @@ add_executable(dsa_pratise main.cpp
         snake-game/Food.h
         snake-game/Game.cpp
         snake-game/Game.h
+        Array-Hashing/Intersection.cpp
+        Array-Hashing/SubarraySum.cpp
+        Two-Pointer/ValidPalindrome.cpp
+        Tree/SameTree.cpp
+        Tree/TreeNode.cpp
+        Tree/TreeNode.h
+        Tree/SymmetricTree.cpp
 )

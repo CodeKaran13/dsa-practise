@@ -31,27 +31,21 @@ std::vector<int> twoSum(const std::vector<int>& nums, int target)
     return {};
 }
 
-/// if nums array is sorted
+// if nums array is sorted
 std::vector<int> twoSumOptimized(const std::vector<int>& nums, int target)
 {
     int left = 0;
-    int right = nums.size() - 1;
+    int right = static_cast<int>(nums.size()) - 1;
     while (left < right)
     {
         int sum = nums[left] + nums[right];
         if (sum == target)
-        {
             return {left, right};
-        }
 
         if (sum > target)
-        {
             right--;
-        }
         else
-        {
             left++;
-        }
     }
 
     return {};
