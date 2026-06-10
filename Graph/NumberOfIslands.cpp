@@ -42,7 +42,7 @@ void DFS(vector<vector<char>>& grid, int r, int c)
 
 int NumIslands(vector<vector<char>>& grid)
 {
-    if (grid.empty())
+    if (grid.empty() || grid[0].empty())
         return 0;
 
     const int rows = static_cast<int>(grid.size());

@@ -89,4 +89,6 @@ add_executable(dsa_pratise main.cpp
         Tree/SymmetricTree.cpp
         Tree/InvertBinaryTree.cpp
         Graph/FloodFill.cpp
+        Stack/MinStack.cpp
+        Stack/MinStack.h
 )
