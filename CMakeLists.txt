@@ -91,4 +91,6 @@ add_executable(dsa_pratise main.cpp
         Graph/FloodFill.cpp
         Stack/MinStack.cpp
         Stack/MinStack.h
+        Math-Manipulation/Reverse.cpp
+        Math-Manipulation/PalindromeNumber.cpp
 )
