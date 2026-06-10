@@ -29,14 +29,15 @@ vector<vector<string>> groupAnagrams(const vector<string>& strs)
     {
         string key = word;
         sort(key.begin(), key.end());
-        group[key].push_back(word);
+        group[key].emplace_back(word);
     }
 
     vector<vector<string>> result;
+    result.reserve(group.size());
+
     for (auto& pair : group)
     {
-        result.reserve(group.size());
-        result.push_back(pair.second);
+        result.emplace_back(pair.second);
     }
 
     return result;
