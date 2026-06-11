@@ -7,13 +7,12 @@
 #include <vector>
 
 using namespace std;
-vector<int> topKFrequent(const vector<int>& nums, int k)
+
+vector<int> TopKFrequent(const vector<int>& nums, int k)
 {
     unordered_map<int, int> freq;
     for (int num : nums)
-    {
         freq[num]++;
-    }
 
     using Pair = pair<int, int>;
     priority_queue<Pair, vector<Pair>, greater<Pair>> minHeap;
@@ -24,12 +23,10 @@ vector<int> topKFrequent(const vector<int>& nums, int k)
         int count = pair.second;
 
         // emplace is optimized. push makes copy
-        minHeap.emplace(count, num);
+        minHeap.push({count, num});
 
         if (minHeap.size() > k)
-        {
             minHeap.pop();
-        }
     }
 
     vector<int> result;
