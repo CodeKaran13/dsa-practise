@@ -8,7 +8,7 @@
 #include <vector>
 #include "Enemy.h"
 #include "Projectile.h"
-#include "../move-a-to-b/Vector.h"
+#include "../Gameplay/Vector.h"
 #include <memory>
 
 namespace TowerDefense

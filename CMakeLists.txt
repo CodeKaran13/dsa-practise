@@ -37,8 +37,8 @@ add_executable(dsa_pratise main.cpp
         weapon-system/WeaponFactory.h
         weapon-system/Player.cpp
         weapon-system/Player.h
-        move-a-to-b/Vector.cpp
-        move-a-to-b/Vector.h
+        Gameplay/Vector.cpp
+        Gameplay/Vector.h
         ability-system/Ability.cpp
         ability-system/Ability.h
         tic-tac-toe/Cell.cpp

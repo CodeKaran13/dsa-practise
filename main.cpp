@@ -4,7 +4,7 @@
 #include "weapon-system/Player.h"
 #include "weapon-system/Weapon.h"
 #include "weapon-system/WeaponFactory.h"
-#include "move-a-to-b/Vector.h"
+#include "Gameplay/Vector.h"
 
 std::vector<int> twoSum(const std::vector<int>& nums, int target);
 

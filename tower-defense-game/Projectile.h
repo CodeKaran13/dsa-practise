@@ -6,7 +6,7 @@
 #define DSA_PRATISE_PROJECTILE_H
 
 #include "Enemy.h"
-#include "../move-a-to-b/Vector.h"
+#include "../Gameplay/Vector.h"
 
 namespace TowerDefense
 {
