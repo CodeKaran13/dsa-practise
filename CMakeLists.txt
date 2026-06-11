@@ -100,4 +100,6 @@ add_executable(dsa_pratise main.cpp
         Binary-Search/SearchInsertPosition.cpp
         Linked-List/ListNode.cpp
         Linked-List/ListNode.h
+        RAII/ThreadSafeQueue.cpp
+        RAII/ThreadSafeQueue.h
 )

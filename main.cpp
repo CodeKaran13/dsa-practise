@@ -1,10 +1,12 @@
 #include <iostream>
+#include <thread>
 #include <vector>
 
 #include "weapon-system/Player.h"
 #include "weapon-system/Weapon.h"
 #include "weapon-system/WeaponFactory.h"
 #include "Gameplay/Vector.h"
+#include "RAII/ThreadSafeQueue.h"
 
 std::vector<int> twoSum(const std::vector<int>& nums, int target);
 
@@ -42,13 +44,26 @@ int main()
     // player.EquipWeapon(WeaponFactory::CreateWeapon(WeaponType::RocketLauncher));
     // player.FireWeapon();
 
-    Vector2 start{10.0f, 20.0f};
-    Vector2 end{110.0f, 70.0f};
+    ThreadSafeQueue<std::string> queue;
 
-    float duration = 5.0f;
-    float deltaTime = 0.2f;
+    std::thread producer([&queue]()
+    {
+        queue.Push("Load Assets");
+        queue.Push("Parse Config");
+        queue.Push("Build NavMesh");
+    });
 
-    Move(start, end, duration, deltaTime);
+    std::thread consumer([&queue]()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            std::string job = queue.WaitAndPop();
+            std::cout << "Consumed Job: " << job << "\n";
+        }
+    });
+
+    producer.join();
+    consumer.join();
 
     return 0;
 }
