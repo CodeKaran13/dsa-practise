@@ -12,7 +12,7 @@ bool isValid(const std::string& s);
 
 bool isValidOptimized(const std::string& s);
 
-void Move(Vector2 start, Vector2 end, float duration, float deltaTime)
+void Move(const Vector2 start, const Vector2 end, const float duration, float deltaTime)
 {
     float elapsedTime = 0.0f;
 
