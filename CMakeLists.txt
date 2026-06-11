@@ -95,4 +95,7 @@ add_executable(dsa_pratise main.cpp
         Math-Manipulation/PalindromeNumber.cpp
         Math-Manipulation/PlusOne.cpp
         binary-search/Sqrt.cpp
+        Two-Pointer/MergeSortedArray.cpp
+        Two-Pointer/RemoveDuplicates.cpp
+        Binary-Search/SearchInsertPosition.cpp
 )
