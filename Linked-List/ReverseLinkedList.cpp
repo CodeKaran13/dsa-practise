@@ -2,13 +2,7 @@
 // Created by Karan Nandkar on 03-06-2026.
 //
 
-struct ListNode
-{
-    int val;
-    ListNode* next;
-
-    ListNode(int x) : val(x), next(nullptr) {}
-};
+#include "ListNode.h"
 
 ListNode* reverseList(ListNode* head)
 {

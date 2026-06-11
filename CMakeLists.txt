@@ -24,7 +24,7 @@ add_executable(dsa_pratise main.cpp
         backtracking/Permutations.cpp
         raii/File.cpp
         raii/Buffer.cpp
-        fundamentals/DynamicArray.cpp
+        raii/DynamicArray.cpp
         weapon-system/Weapon.cpp
         weapon-system/Weapon.h
         weapon-system/Pistol.cpp
@@ -98,4 +98,6 @@ add_executable(dsa_pratise main.cpp
         Two-Pointer/MergeSortedArray.cpp
         Two-Pointer/RemoveDuplicates.cpp
         Binary-Search/SearchInsertPosition.cpp
+        Linked-List/ListNode.cpp
+        Linked-List/ListNode.h
 )

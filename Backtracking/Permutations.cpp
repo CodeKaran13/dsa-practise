@@ -18,7 +18,9 @@
 
 #include <vector>
 
-void dfs(const std::vector<int>& nums, std::vector<bool>& used, std::vector<int>& current, std::vector<std::vector<int>>& result)
+using namespace std;
+
+void DFS(const vector<int>& nums, vector<bool>& used, vector<int>& current, vector<vector<int>>& result)
 {
     // Complete permutation formed
     if (current.size() == nums.size())
@@ -40,7 +42,7 @@ void dfs(const std::vector<int>& nums, std::vector<bool>& used, std::vector<int>
         current.push_back(nums[i]);
 
         // Explore
-        dfs(nums, used, current, result);
+        DFS(nums, used, current, result);
 
         // Backtrack
         current.pop_back();
@@ -48,13 +50,13 @@ void dfs(const std::vector<int>& nums, std::vector<bool>& used, std::vector<int>
     }
 }
 
-std::vector<std::vector<int>> permutations(const std::vector<int>& nums)
+vector<vector<int>> Permutations(const vector<int>& nums)
 {
-    std::vector<std::vector<int>> result;
-    std::vector<int> current;
-    std::vector<bool> used(nums.size(), false);
+    vector<vector<int>> result;
+    vector<int> current;
+    vector<bool> used(nums.size(), false);
 
-    dfs(nums, used, current, result);
+    DFS(nums, used, current, result);
 
     return result;
 }
