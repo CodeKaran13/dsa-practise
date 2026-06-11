@@ -93,4 +93,6 @@ add_executable(dsa_pratise main.cpp
         Stack/MinStack.h
         Math-Manipulation/Reverse.cpp
         Math-Manipulation/PalindromeNumber.cpp
+        Math-Manipulation/PlusOne.cpp
+        binary-search/Sqrt.cpp
 )
