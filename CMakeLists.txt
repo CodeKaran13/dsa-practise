@@ -102,4 +102,7 @@ add_executable(dsa_pratise main.cpp
         Linked-List/ListNode.h
         RAII/ThreadSafeQueue.cpp
         RAII/ThreadSafeQueue.h
+        Two-Pointer/ThreeSum.cpp
+        Two-Pointer/ContainerWithMostWater.cpp
+        Binary-Search/SearchMatrix.cpp
 )

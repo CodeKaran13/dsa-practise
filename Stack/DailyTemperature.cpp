@@ -17,22 +17,22 @@
 #include <stack>
 #include <vector>
 
-std::vector<int> dailyTemperatures(const std::vector<int> &temperatures)
+std::vector<int> dailyTemperatures(const std::vector<int>& temperatures)
 {
-	std::vector<int> result(temperatures.size(), 0);
-	std::stack<int> st;
+    std::vector<int> result(temperatures.size(), 0);
+    std::stack<int> st;
 
-	for (int i = 0; i < temperatures.size(); i++)
-	{
-		while (!st.empty() && temperatures[i] > temperatures[st.top()])
-		{
-			int previousDay = st.top();
-			st.pop();
-			result[previousDay] = i - previousDay;
-		}
+    for (int i = 0; i < temperatures.size(); i++)
+    {
+        while (!st.empty() && temperatures[i] > temperatures[st.top()])
+        {
+            const int previousDay = st.top();
+            st.pop();
+            result[previousDay] = i - previousDay;
+        }
 
-		st.push(i);
-	}
+        st.push(i);
+    }
 
-	return result;
+    return result;
 }

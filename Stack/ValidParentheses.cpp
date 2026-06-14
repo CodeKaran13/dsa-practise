@@ -2,18 +2,6 @@
 // Created by Karan Nandkar on 10/05/26.
 //
 
-/*
- * Problem:
- * Given:
- * "()[]{}"
- * Return:
- * True
- * Given:
- * "(]"
- * Return:
- * False
- */
-
 #include <stack>
 #include <string>
 #include <unordered_map>

@@ -33,7 +33,7 @@
 
 std::vector<int> productExceptSelf(const std::vector<int>& nums)
 {
-    int n = nums.size();
+    int n = static_cast<int>(nums.size());
 
     std::vector<int> result(n, 1);
 

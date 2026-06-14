@@ -21,9 +21,9 @@
 bool canFinish(const std::vector<int>& piles, int speed, int h)
 {
     long long hoursNeeded = 0;
-    for (int bananas : piles)
+    for (const int bananas : piles)
     {
-        hoursNeeded += std::ceil((double)bananas / speed);
+        hoursNeeded += std::ceil(static_cast<double>(bananas) / speed);
     }
 
     return hoursNeeded <= h;
