@@ -1,5 +1,5 @@
 ﻿//
-// Created by knand on 17-05-2026.
+// Created by Karan Nandkar on 17-05-2026.
 //
 
 
@@ -15,11 +15,11 @@
 #include <vector>
 
 
-int longestConsecutive(const std::vector<int>& nums)
+int LongestConsecutive(const std::vector<int>& nums)
 {
     std::unordered_set<int> numSet(nums.begin(), nums.end());
     int longest = 0;
-    for (const int num : nums)
+    for (int num : nums)
     {
         if (!numSet.contains(num - 1))
         {
