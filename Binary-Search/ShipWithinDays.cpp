@@ -2,18 +2,21 @@
 // Created by Karan Nandkar on 03-06-2026.
 //
 
+
+/**
+ * Capacity to ship packages
+ */
+
 #include <algorithm>
 #include <numeric>
 #include <vector>
 
-using namespace std;
-
-bool canShip(const vector<int>& weights, int days, int capacity)
+bool CanShip(const std::vector<int>& weights, int days, int capacity)
 {
     int daysUsed = 1;
     int currentLoad = 0;
 
-    for (const int weight : weights)
+    for (int weight : weights)
     {
         if (currentLoad + weight > capacity)
         {
@@ -25,22 +28,20 @@ bool canShip(const vector<int>& weights, int days, int capacity)
     return daysUsed <= days;
 }
 
-int shipWithinDays(const vector<int>& weights, int days)
+int ShipWithinDays(const std::vector<int>& weights, int days)
 {
-    int left = *max_element(weights.begin(), weights.end());
-    int right = accumulate(weights.begin(), weights.end(), 0);
+    // left is max package weight because that should be minimum capacity to ship in 1 day
+    int left = *std::max_element(weights.begin(), weights.end());
+    int right = std::accumulate(weights.begin(), weights.end(), 0);
 
     while (left < right)
     {
         int mid = left + (right - left) / 2;
-        if (canShip(weights, days, mid))
-        {
+
+        if (CanShip(weights, days, mid))
             right = mid - 1;
-        }
         else
-        {
             left = mid + 1;
-        }
     }
     return left;
 }

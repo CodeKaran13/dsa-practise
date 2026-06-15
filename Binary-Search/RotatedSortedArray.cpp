@@ -14,7 +14,7 @@
 
 #include <vector>
 
-int searchInRotatedSortedArray(const std::vector<int>& nums, int target)
+int SearchInRotatedSortedArray(const std::vector<int>& nums, int target)
 {
     int left = 0;
     int right = static_cast<int>(nums.size()) - 1;
@@ -22,6 +22,7 @@ int searchInRotatedSortedArray(const std::vector<int>& nums, int target)
     while (left <= right)
     {
         const int mid = left + (right - left) / 2;
+
         if (nums[mid] == target)
             return mid;
 
@@ -30,26 +31,17 @@ int searchInRotatedSortedArray(const std::vector<int>& nums, int target)
         {
             // Check if target lies between left and mid
             if (nums[left] <= target && target < nums[mid])
-            {
                 right = mid - 1;
-            }
             else
-            {
                 left = mid + 1;
-            }
         }
-        // Right half sorted
-        else
+        else // Right half sorted
         {
             // Check if target lies between mid and right
             if (nums[mid] < target && target <= nums[right])
-            {
                 left = mid + 1;
-            }
             else
-            {
                 right = mid - 1;
-            }
         }
     }
 
