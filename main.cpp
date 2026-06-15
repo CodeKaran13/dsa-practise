@@ -8,7 +8,7 @@
 #include "Gameplay/Vector.h"
 #include "RAII/ThreadSafeQueue.h"
 
-std::vector<int> twoSum(const std::vector<int>& nums, int target);
+std::vector<int> TwoSum(const std::vector<int>& nums, int target);
 
 bool isValid(const std::string& s);
 

@@ -3,12 +3,14 @@
 //
 
 /*
- * Problem:
+ * Problem: Find the length of the LONGEST substring without repeating characters.
+ *
  * Given a string:
  * "abcabcbb"
- * Find the length of the LONGEST substring without repeating characters.
+ *
  * Answer:
  * 3
+ *
  * Because: "abc"
  */
 
@@ -16,7 +18,7 @@
 #include <unordered_map>
 #include <unordered_set>
 
-int lengthOfLongestSubstring(const std::string& s)
+int LengthOfLongestSubstring(const std::string& s)
 {
     std::unordered_set<char> seen;
     int left = 0;
@@ -37,7 +39,7 @@ int lengthOfLongestSubstring(const std::string& s)
     return maxLength;
 }
 
-int lengthOfLongestSubstringOptimized(const std::string& s)
+int LengthOfLongestSubstringOptimized(const std::string& s)
 {
     std::unordered_map<char, int> lastSeen;
     int left = 0;

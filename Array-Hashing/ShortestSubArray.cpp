@@ -17,7 +17,7 @@
 #include <climits>
 #include <vector>
 
-int shortestSubArray(const std::vector<int>& nums, int target)
+int ShortestSubArray(const std::vector<int>& nums, int target)
 {
     int left = 0;
     int sum = 0;

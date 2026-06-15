@@ -31,10 +31,9 @@
 
 #include <vector>
 
-std::vector<int> productExceptSelf(const std::vector<int>& nums)
+std::vector<int> ProductExceptSelf(const std::vector<int>& nums)
 {
     int n = static_cast<int>(nums.size());
-
     std::vector<int> result(n, 1);
 
     // Prefix products
