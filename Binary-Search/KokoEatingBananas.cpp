@@ -16,9 +16,11 @@
  */
 
 
+#include <algorithm>
+#include <cmath>
 #include <vector>
 
-bool canFinish(const std::vector<int>& piles, int speed, int h)
+bool CanFinish(const std::vector<int>& piles, int speed, int h)
 {
     long long hoursNeeded = 0;
     for (const int bananas : piles)
@@ -29,22 +31,19 @@ bool canFinish(const std::vector<int>& piles, int speed, int h)
     return hoursNeeded <= h;
 }
 
-int minEatingSpeed(const std::vector<int>& piles, int speed, int h)
+int MinEatingSpeed(const std::vector<int>& piles, int speed, int h)
 {
     int left = 1;
     int right = *std::max_element(piles.begin(), piles.end());
 
-    while (left < right)
+    while (left <= right)
     {
         int mid = left + (right - left) / 2;
-        if (canFinish(piles, mid, h))
-        {
-            right = mid;
-        }
+
+        if (CanFinish(piles, mid, h))
+            right = mid - 1;
         else
-        {
             left = mid + 1;
-        }
     }
 
     return left;
