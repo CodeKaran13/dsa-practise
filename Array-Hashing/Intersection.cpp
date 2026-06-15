@@ -27,13 +27,9 @@ std::vector<int> Intersection(const std::vector<int>& nums1, const std::vector<i
     std::unordered_set<int> set(nums1.begin(), nums1.end());
     std::unordered_set<int> resultSet;
 
-    for (const int& num : nums2)
-    {
+    for (int num : nums2)
         if (set.count(num))
-        {
             resultSet.insert(num);
-        }
-    }
 
     return {resultSet.begin(), resultSet.end()};
 }
@@ -42,13 +38,11 @@ std::vector<int> Intersection(const std::vector<int>& nums1, const std::vector<i
 std::vector<int> IntersectionPreserveDuplicates(const std::vector<int>& nums1, const std::vector<int>& nums2)
 {
     std::unordered_map<int, int> freq;
-    for (const int& num : nums1)
-    {
+    for (int num : nums1)
         freq[num]++;
-    }
 
     std::vector<int> result;
-    for (const int& num : nums2)
+    for (int num : nums2)
     {
         if (freq[num] > 0)
         {
