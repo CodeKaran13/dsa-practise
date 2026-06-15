@@ -22,7 +22,7 @@
 
 using namespace std;
 
-vector<vector<string>> groupAnagrams(const vector<string>& strs)
+vector<vector<string>> GroupAnagrams(const vector<string>& strs)
 {
     unordered_map<string, vector<string>> group;
     for (const string& word : strs)
@@ -33,12 +33,8 @@ vector<vector<string>> groupAnagrams(const vector<string>& strs)
     }
 
     vector<vector<string>> result;
-    result.reserve(group.size());
-
     for (auto& pair : group)
-    {
         result.emplace_back(pair.second);
-    }
 
     return result;
 }
