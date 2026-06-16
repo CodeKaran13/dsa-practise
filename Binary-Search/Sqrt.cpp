@@ -3,7 +3,7 @@
 //
 
 
-int Sqrt(const int x)
+int Sqrt(int x)
 {
     if (x < 2)
         return x;

@@ -54,7 +54,7 @@ public:
     {
         std::lock_guard<std::mutex> lock(m_mutex);
         if (m_queue.empty())
-            return nullptr;
+            return std::nullopt;
 
         T value = std::move(m_queue.front());
         m_queue.pop();

@@ -6,16 +6,15 @@
 #include <unordered_map>
 #include <vector>
 
-using namespace std;
 
-vector<int> TopKFrequent(const vector<int>& nums, int k)
+std::vector<int> TopKFrequent(const std::vector<int>& nums, int k)
 {
-    unordered_map<int, int> freq;
+    std::unordered_map<int, int> freq;
     for (int num : nums)
         freq[num]++;
 
-    using Pair = pair<int, int>;
-    priority_queue<Pair, vector<Pair>, greater<Pair>> minHeap;
+    using Pair = std::pair<int, int>;
+    std::priority_queue<Pair, std::vector<Pair>, std::greater<Pair>> minHeap;
 
     for (const auto& pair : freq)
     {
@@ -29,7 +28,7 @@ vector<int> TopKFrequent(const vector<int>& nums, int k)
             minHeap.pop();
     }
 
-    vector<int> result;
+    std::vector<int> result;
     while (!minHeap.empty())
     {
         result.push_back(minHeap.top().second);

@@ -2,17 +2,17 @@
 #include <thread>
 #include <vector>
 
-#include "weapon-system/Player.h"
-#include "weapon-system/Weapon.h"
-#include "weapon-system/WeaponFactory.h"
+#include "Gameplay/WeaponSystem/Player.h"
+#include "Gameplay/WeaponSystem/Weapon.h"
+#include "Gameplay/WeaponSystem/WeaponFactory.h"
 #include "Gameplay/Vector.h"
 #include "RAII/ThreadSafeQueue.h"
 
 std::vector<int> TwoSum(const std::vector<int>& nums, int target);
 
-bool isValid(const std::string& s);
+bool IsValid(const std::string& s);
 
-bool isValidOptimized(const std::string& s);
+bool IsValidOptimized(const std::string& s);
 
 void Move(const Vector2 start, const Vector2 end, const float duration, float deltaTime)
 {

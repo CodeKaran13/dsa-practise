@@ -17,7 +17,7 @@
 #include <stack>
 #include <vector>
 
-std::vector<int> dailyTemperatures(const std::vector<int>& temperatures)
+std::vector<int> DailyTemperatures(const std::vector<int>& temperatures)
 {
     std::vector<int> result(temperatures.size(), 0);
     std::stack<int> st;

@@ -7,18 +7,18 @@
 
 #include "TreeNode.h"
 
-int maxDepth(const TreeNode* root)
+int MaxDepth(const TreeNode* root)
 {
     if (root == nullptr)
         return 0;
 
-    int leftDepth = maxDepth(root->left);
-    int rightDepth = maxDepth(root->right);
+    int leftDepth = MaxDepth(root->left);
+    int rightDepth = MaxDepth(root->right);
 
     return 1 + std::max(leftDepth, rightDepth);
 }
 
-int maxDepthBFS(TreeNode* root)
+int MaxDepthBFS(TreeNode* root)
 {
     if (root == nullptr)
         return 0;

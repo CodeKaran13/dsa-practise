@@ -12,6 +12,7 @@ bool Validate(const TreeNode* node, long long minValue, long long maxValue)
 {
     if (node == nullptr)
         return true;
+
     if (node->val <= minValue || node->val >= maxValue)
         return false;
 

@@ -21,10 +21,8 @@ public:
 
     // Constructor with size
     DynamicArray(size_t newSize)
-        : data(new int[newSize]), size(newSize)
-    {
-        std::fill(data, data + size, 0);
-    }
+        : data(new int[newSize]{}), size(newSize)
+    {}
 
     // Destructor
     ~DynamicArray()
@@ -47,9 +45,7 @@ public:
     DynamicArray& operator=(const DynamicArray& other)
     {
         if (this == &other)
-        {
             return *this;
-        }
 
         int* newData = nullptr;
 
@@ -79,9 +75,7 @@ public:
     DynamicArray& operator=(DynamicArray&& other) noexcept
     {
         if (this == &other)
-        {
             return *this;
-        }
 
         delete[] data;
 

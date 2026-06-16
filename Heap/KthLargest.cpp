@@ -6,11 +6,9 @@
 #include <queue>
 #include <vector>
 
-using namespace std;
-
-int FindKthLargest(const vector<int>& nums, int k)
+int FindKthLargest(const std::vector<int>& nums, int k)
 {
-    priority_queue<int, vector<int>, greater<int>> minHeap;
+    std::priority_queue<int, std::vector<int>, std::greater<int>> minHeap;
     for (int num : nums)
     {
         minHeap.push(num);

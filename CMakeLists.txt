@@ -25,42 +25,42 @@ add_executable(dsa_pratise main.cpp
         raii/File.cpp
         raii/Buffer.cpp
         raii/DynamicArray.cpp
-        weapon-system/Weapon.cpp
-        weapon-system/Weapon.h
-        weapon-system/Pistol.cpp
-        weapon-system/Pistol.h
-        weapon-system/Shotgun.cpp
-        weapon-system/Shotgun.h
-        weapon-system/RocketLauncher.cpp
-        weapon-system/RocketLauncher.h
-        weapon-system/WeaponFactory.cpp
-        weapon-system/WeaponFactory.h
-        weapon-system/Player.cpp
-        weapon-system/Player.h
+        Gameplay/WeaponSystem/Weapon.cpp
+        Gameplay/WeaponSystem/Weapon.h
+        Gameplay/WeaponSystem/Pistol.cpp
+        Gameplay/WeaponSystem/Pistol.h
+        Gameplay/WeaponSystem/Shotgun.cpp
+        Gameplay/WeaponSystem/Shotgun.h
+        Gameplay/WeaponSystem/RocketLauncher.cpp
+        Gameplay/WeaponSystem/RocketLauncher.h
+        Gameplay/WeaponSystem/WeaponFactory.cpp
+        Gameplay/WeaponSystem/WeaponFactory.h
+        Gameplay/WeaponSystem/Player.cpp
+        Gameplay/WeaponSystem/Player.h
         Gameplay/Vector.cpp
         Gameplay/Vector.h
-        ability-system/Ability.cpp
-        ability-system/Ability.h
-        tic-tac-toe/Cell.cpp
-        tic-tac-toe/Cell.h
-        tic-tac-toe/Board.cpp
-        tic-tac-toe/Board.h
-        tic-tac-toe/Player.cpp
-        tic-tac-toe/Player.h
-        tic-tac-toe/Game.cpp
-        tic-tac-toe/Game.h
-        tower-defense-game/Enemy.cpp
-        tower-defense-game/Enemy.h
-        tower-defense-game/Path.cpp
-        tower-defense-game/Path.h
-        tower-defense-game/Projectile.cpp
-        tower-defense-game/Projectile.h
-        tower-defense-game/Tower.cpp
-        tower-defense-game/Tower.h
-        tower-defense-game/WaveManager.cpp
-        tower-defense-game/WaveManager.h
-        tower-defense-game/GameManager.cpp
-        tower-defense-game/GameManager.h
+        Gameplay/AbilitySystem/Ability.cpp
+        Gameplay/AbilitySystem/Ability.h
+        Gameplay/TicTacToe/Cell.cpp
+        Gameplay/TicTacToe/Cell.h
+        Gameplay/TicTacToe/Board.cpp
+        Gameplay/TicTacToe/Board.h
+        Gameplay/TicTacToe/Player.cpp
+        Gameplay/TicTacToe/Player.h
+        Gameplay/TicTacToe/Game.cpp
+        Gameplay/TicTacToe/Game.h
+        Gameplay/TowerDefense/Enemy.cpp
+        Gameplay/TowerDefense/Enemy.h
+        Gameplay/TowerDefense/Path.cpp
+        Gameplay/TowerDefense/Path.h
+        Gameplay/TowerDefense/Projectile.cpp
+        Gameplay/TowerDefense/Projectile.h
+        Gameplay/TowerDefense/Tower.cpp
+        Gameplay/TowerDefense/Tower.h
+        Gameplay/TowerDefense/WaveManager.cpp
+        Gameplay/TowerDefense/WaveManager.h
+        Gameplay/TowerDefense/GameManager.cpp
+        Gameplay/TowerDefense/GameManager.h
         binary-search/ShipWithinDays.cpp
         heap/KthLargest.cpp
         heap/TopKFrequentElements.cpp
@@ -68,23 +68,22 @@ add_executable(dsa_pratise main.cpp
         linked-list/ReverseLinkedList.cpp
         linked-list/MergeTwoList.cpp
         tree/MaxDepthBinaryTree.cpp
-        snake-game/Position.cpp
-        snake-game/Position.h
-        snake-game/Direction.cpp
-        snake-game/Direction.h
-        snake-game/Board.cpp
-        snake-game/Board.h
-        snake-game/Snake.cpp
-        snake-game/Snake.h
-        snake-game/Food.cpp
-        snake-game/Food.h
-        snake-game/Game.cpp
-        snake-game/Game.h
+        Gameplay/Snake/Position.cpp
+        Gameplay/Snake/Position.h
+        Gameplay/Snake/Direction.cpp
+        Gameplay/Snake/Direction.h
+        Gameplay/Snake/Board.cpp
+        Gameplay/Snake/Board.h
+        Gameplay/Snake/Snake.cpp
+        Gameplay/Snake/Snake.h
+        Gameplay/Snake/Food.cpp
+        Gameplay/Snake/Food.h
+        Gameplay/Snake/Game.cpp
+        Gameplay/Snake/Game.h
         Array-Hashing/Intersection.cpp
         Array-Hashing/SubarraySum.cpp
         Two-Pointer/ValidPalindrome.cpp
         Tree/SameTree.cpp
-        Tree/TreeNode.cpp
         Tree/TreeNode.h
         Tree/SymmetricTree.cpp
         Tree/InvertBinaryTree.cpp
@@ -100,7 +99,6 @@ add_executable(dsa_pratise main.cpp
         Binary-Search/SearchInsertPosition.cpp
         Linked-List/ListNode.cpp
         Linked-List/ListNode.h
-        RAII/ThreadSafeQueue.cpp
         RAII/ThreadSafeQueue.h
         Two-Pointer/ThreeSum.cpp
         Two-Pointer/ContainerWithMostWater.cpp
